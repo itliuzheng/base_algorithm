@@ -20,7 +20,7 @@
 </template>
 <script>
 
-  import { Stack, Queue, PriorityQueue } from '@/api/data';
+  import { Stack, Queue, PriorityQueue, LinkedList } from '@/api/data';
   import { divideBy2, baseConverter, hotPotato } from '@/utils/algorithm'
 
   export default {
@@ -68,6 +68,13 @@
       // let names = ['李1','李2','李3','李4','李5'];
       // let winner = hotPotato(names,2);
       // console.log('获胜者是:'+winner);
+
+      let list = new LinkedList();
+
+      list.append(1);
+      list.append(13);
+
+      console.log(list);
 
       return {
         decNumber:null,

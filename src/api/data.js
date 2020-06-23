@@ -299,6 +299,7 @@ export let PriorityQueue = (function () {
 //创建链表
 
 export let LinkedList = (function () {
+
   let Node = function (element) {
     this.element = element;
     this.next = null;
@@ -306,40 +307,66 @@ export let LinkedList = (function () {
 
   let length = 0;
   let head = null;
-  class linkedList{
+  class LinkedList{
     constructor(){
 
     }
-    
+
+    //向列表尾部添加一个新的项
     append(element){
+      let node = new Node(element),
+        current;
+
+      if(head === null){
+        head = node;
+      }else{
+        current = head;
+        while(current.next){
+          current = current.next;
+        }
+        current.next = node;
+      }
+
+      length ++;
+
+
 
     }
 
+    //向列表的特定位置插入一个新的项
     insert(position,element){
 
     }
+    //从列表的特定位置移除一项
     removeAt(position){
 
     }
+    // 从列表中移除一项
     remove(element){
 
     }
 
+    //返回元素在列表中的索引，如果列表中没有该元素则返回-1
     indexOf(element){
 
     }
+    //如果链表中不包含任何元素，返回true， 长度大于0 则返回 false
     isEmpty(){
 
     }
+    //返回链表包含的元素个数。
     size(){
 
     }
     getHead(){
 
     }
+
+    //由于列表项使用了Node类，就需要重写继承自javaScript对象默认的 toString 方法，让其只输出元素的值
     toString(){
 
     }
+
     print(){
 
     }
