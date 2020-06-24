@@ -20,7 +20,7 @@
 </template>
 <script>
 
-  import { Stack, Queue, PriorityQueue, LinkedList } from '@/api/data';
+  import { Stack, Queue, PriorityQueue, LinkedList, Set, Dictionary } from '@/api/data';
   import { divideBy2, baseConverter, hotPotato } from '@/utils/algorithm'
 
   export default {
@@ -69,12 +69,55 @@
       // let winner = hotPotato(names,2);
       // console.log('获胜者是:'+winner);
 
-      let list = new LinkedList();
+      // let list = new LinkedList();
+      //
+      // list.append(1);
+      // list.append(13);
+      // list.append(3);
+      // list.append(43);
+      //
+      // console.log(list.size());
+      // list.print();
+      //
+      // console.log(list.toString());
 
-      list.append(1);
-      list.append(13);
 
-      console.log(list);
+      // let set = new Set();
+      // set.add(1);
+      // set.add(2);
+      // set.add(3);
+      //
+      // console.log(set.values());
+      // console.log(set.size());
+      //
+      // let setB = new Set();
+      // setB.add(1);
+      // setB.add(2);
+      // setB.add(3);
+      // setB.add(4);
+      //
+      // console.log(set.union(setB).values());
+      // console.log(set.intersection(setB).values());
+      // console.log(set.difference(setB).values());
+      //
+      // let setC = new Set();
+      // setC.add(2);
+      // setC.add(3);
+      // setC.add(4);
+      // console.log(set.subset(setB));
+      // console.log(set.subset(setC));
+
+      var dictionary = new Dictionary();
+
+      dictionary.set('Liuzheng','liuzheng@qq.com');
+      dictionary.set('song','song@qq.com');
+      dictionary.set('wanqian','wanqian@qq.com');
+
+      console.log(dictionary.size());
+      console.log(dictionary.keys());
+      console.log(dictionary.values());
+      console.log(dictionary.getItems());
+
 
       return {
         decNumber:null,
